@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Кофейня Уют</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- Шапка -->
+    <header>
+        <div class="header-container">
+            <h1>Кофейня<br>«Уют»</h1>
+            <nav>
+                <a href="#about">О нас</a>
+                <a href="#menu">Меню</a>
+                <a href="#gallery">Фото</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Главный экран -->
+    <section id="hero">
+        <h2>Добро пожаловать!</h2>
+        <p>Уютное место для хорошего кофе и приятного отдыха.</p>
+        <a href="#menu" class="btn" id="menu-btn">Смотреть меню</a>
+    </section>
+
+    <!-- О нас -->
+    <section id="about">
+        <h2>О нас</h2>
+        <p>Мы небольшая кофейня в центре города. Работаем с 2020 года.</p>
+        <p>Используем только свежеобжаренные зёрна и натуральные ингредиенты.</p>
+        <p>Режим работы: <strong>пн–пт 8:00–21:00, сб–вс 9:00–22:00</strong></p>
+    </section>
+
+    <!-- Меню с табами -->
+    <section id="menu">
+        <h2>Меню</h2>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="coffee">Кофе</button>
+            <button class="tab-btn" data-tab="food">Еда</button>
+        </div>
+
+        <!-- Вкладка: Кофе -->
+        <div id="coffee" class="tab-content">
+            <div class="menu-list">
+                <div class="menu-item" data-dish="espresso">
+                    <span>Эспрессо</span>
+                    <span>200 ₽</span>
+                </div>
+                <div class="menu-item" data-dish="cappuccino">
+                    <span>Капучино</span>
+                    <span>300 ₽</span>
+                </div>
+                <div class="menu-item" data-dish="latte">
+                    <span>Латте</span>
+                    <span>320 ₽</span>
+                </div>
+                <div class="menu-item" data-dish="americano">
+                    <span>Американо</span>
+                    <span>220 ₽</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Вкладка: Еда -->
+        <div id="food" class="tab-content" style="display:none">
+            <div class="menu-list">
+                <div class="menu-item" data-dish="kruassan">
+                    <span>Круассан</span>
+                    <span>150 ₽</span>
+                </div>
+                <div class="menu-item" data-dish="cheescake">
+                    <span>Чизкейк</span>
+                    <span>350 ₽</span>
+                </div>
+                <div class="menu-item" data-dish="avocado-tost">
+                    <span>Тост с авокадо</span>
+                    <span>400 ₽</span>
+                </div>
+                <div class="menu-item" data-dish="brown">
+                    <span>Брауни</span>
+                    <span>280 ₽</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Галерея -->
+    <section id="gallery">
+        <h2>Наша атмосфера</h2>
+        <div class="gallery">
+            <div class="gallery-item" id="latte" data-dish="latte">
+                <img src="images/latte.png" alt="Латте">
+            </div>
+            <div class="gallery-item" data-dish="kruassan">
+                <img src="images/kruassan.png" alt="Круассан">
+            </div>
+            <div class="gallery-item" data-dish="americano">
+                <img src="images/americano.png" alt="Американо">
+            </div>
+            <div class="gallery-item" data-dish="cheescake">
+                <img src="images/cheescake.png" alt="Чизкейк">
+            </div>
+            <div class="gallery-item" data-dish="avocado-tost">
+                <img src="images/avocado-tost.png" alt="Авокадо Тост">
+            </div>
+            <div class="gallery-item" data-dish="espresso">
+                <img src="images/espresso.png" alt="Эспрессо">
+            </div>
+            <div class="gallery-item" data-dish="brown">
+                <img src="images/brown.png" alt="Брауни">
+            </div>
+            <div class="gallery-item" data-dish="cappuccino">
+                <img src="images/cappucino.png" alt="Капучино">
+            </div>
+        </div>
+    </section>
+
+    <!-- Отзывы -->
+    <section id="contact">
+        <h2>Оставить отзыв</h2>
+        <form id="feedback-form">
+            <input type="text" id="name" placeholder="Ваше имя" />
+            <p id="name-error" class="error"></p>
+
+            <textarea id="message" placeholder="Ваш отзыв"></textarea>
+            <p id="msg-error" class="error"></p>
+
+            <button type="submit" class="btn">Отправить</button>
+        </form>
+        <div id="notification" class="notification"></div>
+    </section>
+
+    <!-- Подвал с контактами -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-info">
+                <p>© 2026 Кофейня «Уют»</p>
+                <p>Адрес: ул. Центральная, 5</p>
+                <p>Телефон: +7 (999) 123-45-67</p>
+                <p>Почта: hello@uyut.cafe</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
